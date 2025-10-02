@@ -1,0 +1,42 @@
+[project]
+name = "ddi13"
+version = "0.1.0"
+description = "Monorepo for DDI 13 repositories"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "networkx>=3.5",
+    "pandas>=2.3.1",
+    "polars>=1.31.0",
+]
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+extend-select = ["E", "N", "B", "R", "I", "ANN", "PL", "UP", "D", "TRY", "FURB", "F", "W"]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+docstring-code-format = true
+docstring-code-line-length = 71
+preview = true
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 71
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pyright]
+include = ["src"]
+typeCheckingMode = "strict"
+
+[dependency-groups]
+dev = [
+    "pytest-cov>=6.2.1",
+    "types-networkx>=3.5.0.20250712",
+    "pandas-stubs>=2.3.0.250703",
+    "ipykernel>=6.30.1",
+]

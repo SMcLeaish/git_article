@@ -1,0 +1,3 @@
+Project: Mini Survey Analysis
+Created folders for data, notes, and output.
+Collected responses and saved unique animals.
